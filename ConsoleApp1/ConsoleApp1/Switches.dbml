@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SWITCHES" Class="SwitchesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-F94MD49\SQLEXPRESS;Initial Catalog=SWITCHES;Integrated Security=True" SettingsObjectName="ConsoleApp1.Properties.Settings" SettingsPropertyName="SWITCHESConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SWITCHTABLE" Member="SWITCHTABLEs">
+    <Type Name="SWITCHTABLE">
+      <Column Name="ROOM1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROOM2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetSwitchState" Method="GetSwitchState">
+    <Parameter Name="TEST" Parameter="tEST" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetSwitchStateResult">
+      <Column Name="ROOM1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROOM2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
