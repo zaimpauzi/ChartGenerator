@@ -23,6 +23,31 @@ namespace ChartGenerator
         public MainWindow()
         {
             InitializeComponent();
+            List<DataInputSet> InputData = new List<DataInputSet>();
+            var dataInput1 = new DataInputSet();
+            var dataInput2 = new DataInputSet();
+
+            dataInput1.Width = 50;
+            dataInput1.Height = 10;
+            dataInput1.Depth = 30;
+
+            dataInput2.Width = 100;
+            dataInput2.Height = 80;
+            dataInput2.Depth = 20;
+
+            InputData.Add(dataInput1);
+            InputData.Add(dataInput2);
+            dataGrid.ItemsSource = InputData;
+
+
         }
+    }
+
+    public class DataInputSet
+    {
+        public int Width { get; set; }
+        public int Height { get; set; }
+        public int Depth { get; set; }
+
     }
 }
