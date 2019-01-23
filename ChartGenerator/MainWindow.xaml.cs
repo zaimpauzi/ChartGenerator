@@ -193,6 +193,39 @@ namespace ChartGenerator
             chartView.createPieChart(InputData);
             chartView.Show();
         }
+
+        private void OpenItem_Click(object sender, RoutedEventArgs e)
+        {
+            InputData.Clear();
+            string CSVFileName;
+            OpenFileDialog openCSVFileDialog = new OpenFileDialog();
+            openCSVFileDialog.Multiselect = false;
+            openCSVFileDialog.Filter = "Text files (*.csv)|*.csv";
+            openCSVFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            if (openCSVFileDialog.ShowDialog() == true)
+            {
+                CSVFileName = openCSVFileDialog.FileNames[0];
+                using (var readCSVFile = new StreamReader(CSVFileName))
+                {
+                    while (!readCSVFile.EndOfStream)
+                    {
+                        var dataInput = new DataInputSet();
+
+                        var columns = readCSVFile.ReadLine().Split(',');
+                        dataInput.Length = columns[0];
+                        dataInput.Category = columns[1];
+                        dataInput.BenthicGroup = columns[2];
+                        dataInput.Depth = columns[3];
+                        InputData.Add(dataInput);
+                        dataGrid.ItemsSource = InputData;
+                        dataGrid.Items.Refresh();
+
+                    }
+                }
+            }
+
+           
+        }
     }
 
     public class DataInputSet

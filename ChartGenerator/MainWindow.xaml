@@ -9,7 +9,7 @@
     <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock="Top" Height="20">
             <MenuItem Header="_File">
-                <MenuItem Header="_Open"/>
+                <MenuItem Header="_Open" Click="OpenItem_Click"/>
                 <Separator />
                 <MenuItem Header="_Exit" Click="ExitItem_Click" />
             </MenuItem>
@@ -51,7 +51,7 @@
 
         <Button x:Name="submitBtn" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Content="Submit" HorizontalAlignment="Center" Width="100" Height="30" Margin="0,0,0,5" Click="SubmitBtn_Click" IsDefault="True"></Button>
         <DataGrid CanUserAddRows="False" CurrentCellChanged="DataGrid_CurrentCellChanged" CanUserSortColumns="False" IsEnabled="True" x:Name="dataGrid" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" ColumnWidth="*" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"></DataGrid>
-        <Button x:Name="exportBtn" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Content="Export" HorizontalAlignment="Center" Width="100" Height="30" Margin="200,0,0,5" Click="ExportBtn_Click"></Button>
+        <Button x:Name="exportBtn" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Content="Save As" HorizontalAlignment="Center" Width="100" Height="30" Margin="200,0,0,5" Click="ExportBtn_Click"></Button>
         <Button x:Name="createChartBtn" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Content="Create Chart" HorizontalAlignment="Center" Width="100" Height="30" Margin="0,0,200,5" Click="CreateChartBtn_Click"></Button>
 
     </Grid>

@@ -164,40 +164,66 @@ namespace ChartGenerator.Views
         public void createLineChart(List<DataInputSet> inputData)
         {
             double length = 0;
+            int i = 0;
             List<double> Depth = new List<double>();
+
             foreach (var depthData in inputData)
             {
-                Depth.Add(Convert.ToDouble(depthData.Depth));
+                try
+                {
+                    Depth.Add(Convert.ToDouble(depthData.Depth));
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Missing depth item!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    goto skipCreateChart;
+                }
             }
             double maxDepth = Depth.Max();
 
             var lineChart = new PlotModel { Title = "Depth Profile"};
-            var series = new LineSeries() { Smooth = true, Color = OxyColors.SandyBrown,};
+            var series = new AreaSeries() { Smooth = true, Color = OxyColors.DarkBlue, Background = OxyColors.SandyBrown};
 
             foreach (var data in inputData)
             {
+                i++;
                 string name = data.BenthicGroup;
                 length += Convert.ToDouble(data.Length);
                 double depth = Convert.ToDouble(data.Depth);
+                if (i == 1)
+                {
+                    series.Points.Add(new DataPoint(0, depth));
+                }
                 series.Points.Add(new DataPoint(length, depth));
                 
             }
 
-            var categoryAxis = new CategoryAxis
+            var YAxis = new LinearAxis
             {
+                Title = "Depth",
                 Position = AxisPosition.Left,
-                Key = "DepthProfile",
                 StartPosition = 1,
                 EndPosition = 0,
                 Minimum = 0,
                 Maximum = maxDepth + 1,
-                IsAxisVisible = false,
+                IsZoomEnabled = false
             };
 
-            
+            var XAxis = new LinearAxis
+            {
+                Title = "Intersect Length",
+                Position = AxisPosition.Bottom,
+                Minimum = 0,
+                Maximum = length,
+                IsZoomEnabled = false
+            };
+
             lineChart.Series.Add(series);
-            lineChart.Axes.Add(categoryAxis);
+            lineChart.Axes.Add(YAxis);
+            lineChart.Axes.Add(XAxis);
             chartView.Model = lineChart;
+        skipCreateChart:;
         }
 
         private void PieChartBtn_Click(object sender, RoutedEventArgs e)
@@ -229,8 +255,6 @@ namespace ChartGenerator.Views
                     bmp.Save(bmpFileStream);
                 }
             }
-
-            
         }
     }
 
