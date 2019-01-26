@@ -4,7 +4,9 @@ CoralLAB is a tool to automatically identify the benthic group of input item suc
 
 # The Usage
 ![](https://github.com/zaimpauzi/CoralLAB/blob/master/Documentation/Usage.PNG?raw=true)
-### Example
+
+### Example of usage
+![](https://github.com/zaimpauzi/CoralLAB/blob/master/Documentation/Example.PNG?raw=true)
 
 # References
 
