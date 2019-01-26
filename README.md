@@ -31,4 +31,4 @@ Table 1 Structure of benthic group codes and their component benthic life forms.
 
 # Download
 
-Version 1.0 : [Download](https://github.com/zaimpauzi/CoralLAB/releases/download/1.0/CoralLAB_v1.0_setup.exe)
+Version 1.0 : [Download Here](https://github.com/zaimpauzi/CoralLAB/releases/download/1.0/CoralLAB_v1.0_setup.exe)
