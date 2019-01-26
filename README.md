@@ -7,3 +7,7 @@ CoralLAB is a tool to automatically assign the input item into which type of ben
 ### Example
 
 # References
+
+# Download
+
+Version 1.0 : [Download](https://github.com/zaimpauzi/CoralLAB/releases/download/1.0/CoralLAB_v1.0_setup.exe)
