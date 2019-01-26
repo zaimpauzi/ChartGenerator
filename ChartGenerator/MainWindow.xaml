@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChartGenerator"
         mc:Ignorable="d"
-        Title="Intersect Analyzer (BETA)" Height="450" Width="600">
+        Title="CoralLAB v1.0" Height="450" Width="600">
     <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock="Top" Height="20">
             <MenuItem Header="_File">
@@ -33,7 +33,7 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="10" />
         </Grid.RowDefinitions>
-            <Image Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Source="/IntersectAnalyzerApp;component/Resources/reef.jpeg" Stretch="Fill" Opacity="0.5"></Image>
+            <Image Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Source="/CoralLAB;component/Resources/reef.jpeg" Stretch="Fill" Opacity="0.5"></Image>
         <Frame Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2" BorderThickness="1" BorderBrush="Black" Margin="0,0,0,0"/>
             <StackPanel  Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
             <TextBlock Text="Intersect Length" Width="120" Height="20" TextAlignment="Center" FontWeight="Bold" FontSize="14"/>
@@ -52,7 +52,7 @@
         <Button x:Name="submitBtn" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Content="Submit" HorizontalAlignment="Center" Width="100" Height="30" Margin="0,0,0,5" Click="SubmitBtn_Click" IsDefault="True"></Button>
         <DataGrid CanUserAddRows="False" CurrentCellChanged="DataGrid_CurrentCellChanged" CanUserSortColumns="False" IsEnabled="True" x:Name="dataGrid" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" ColumnWidth="*" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"></DataGrid>
         <Button x:Name="exportBtn" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Content="Save As" HorizontalAlignment="Center" Width="100" Height="30" Margin="200,0,0,5" Click="ExportBtn_Click"></Button>
-        <Button x:Name="createChartBtn" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Content="Create Chart" HorizontalAlignment="Center" Width="100" Height="30" Margin="0,0,200,5" Click="CreateChartBtn_Click"></Button>
+        <Button x:Name="createChartBtn" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Content="Create Chart" HorizontalAlignment="Center" Width="100" Height="30" Margin="0,0,200,5" IsEnabled="False" Click="CreateChartBtn_Click"></Button>
 
     </Grid>
     </DockPanel>

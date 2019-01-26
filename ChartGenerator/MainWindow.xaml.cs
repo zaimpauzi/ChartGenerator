@@ -86,6 +86,10 @@ namespace ChartGenerator
             }
         skip:;
 
+            if (InputData.Count != 0)
+            {
+                createChartBtn.IsEnabled = true;
+            }
             }
 
         private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
@@ -184,6 +188,8 @@ namespace ChartGenerator
 
                 //throw;
             }
+
+
         }
 
         private void CreateChartBtn_Click(object sender, RoutedEventArgs e)
@@ -224,7 +230,18 @@ namespace ChartGenerator
                 }
             }
 
-           
+            if (InputData.Count != 0)
+            {
+                createChartBtn.IsEnabled = true;
+            }
+
+            if (InputData.Count == 0)
+            {
+                createChartBtn.IsEnabled = false;
+            }
+
+
+
         }
     }
 

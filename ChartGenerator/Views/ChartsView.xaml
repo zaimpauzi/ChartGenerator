@@ -10,15 +10,15 @@
     <DockPanel>
         <StackPanel DockPanel.Dock="Left" >
             <Button x:Name="pieChartBtn" Width="50" Height="50" Margin="5" Click="PieChartBtn_Click">
-                <Image Source="/IntersectAnalyzerApp;component/Resources/pieChartIcon.png"></Image>
+                <Image Source="/CoralLAB;component/Resources/pieChartIcon.png"></Image>
             </Button>
             <Separator></Separator>
             <Button x:Name="seriesBtn" Width="50" Height="50" Margin="5" Click="SeriesBtn_Click">
-                <Image Source="/IntersectAnalyzerApp;component/Resources/depthProfileIcon.png"></Image>
+                <Image Source="/CoralLAB;component/Resources/depthProfileIcon.png"></Image>
             </Button>
             <Separator></Separator>
             <Button x:Name="saveBtn" Width="50" Height="50" Margin="5" Click="SaveBtn_Click">
-                <Image Source="/IntersectAnalyzerApp;component/Resources/saveIcon.png"></Image>
+                <Image Source="/CoralLAB;component/Resources/saveIcon.png"></Image>
             </Button>
             <Separator></Separator>
 

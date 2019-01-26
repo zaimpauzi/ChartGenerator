@@ -7,12 +7,12 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ChartGenerator")]
+[assembly: AssemblyTitle("CoralLab")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ChartGenerator")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyProduct("CoralLab")]
+[assembly: AssemblyCopyright("Copyright © 2019 Neutronsys Solution")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

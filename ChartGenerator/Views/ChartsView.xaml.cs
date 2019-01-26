@@ -164,6 +164,7 @@ namespace ChartGenerator.Views
         public void createLineChart(List<DataInputSet> inputData)
         {
             double length = 0;
+            double maxDepth = 0;
             int i = 0;
             List<double> Depth = new List<double>();
 
@@ -180,7 +181,15 @@ namespace ChartGenerator.Views
                     goto skipCreateChart;
                 }
             }
-            double maxDepth = Depth.Max();
+            try
+            {
+                maxDepth = Depth.Max();
+            }
+            catch (Exception)
+            {
+                goto skipCreateChart;
+              
+            }
 
             var lineChart = new PlotModel { Title = "Depth Profile"};
             var series = new AreaSeries() { Smooth = true, Color = OxyColors.DarkBlue, Background = OxyColors.SandyBrown};
