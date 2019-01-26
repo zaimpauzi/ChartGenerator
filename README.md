@@ -8,6 +8,25 @@ CoralLAB is a tool to automatically identify the benthic group of input item suc
 
 # References
 
+Table 1 Structure of benthic group codes and their component benthic life forms.
+
+| Abiotic  | Dead Coral | Hard Coral | Soft Coral | Coralline Algae | Macro Algae | Turf Algae | Sponge | Other | Indeterminate |
+|----------|------------|------------|------------|-----------------|-------------|------------|--------|-------|---------------|
+|   RCK    |     DC     |     ACX    |       SC   |         CA      |      HA     |     TA     |    SP  |   OT  |    IN         |
+|    R     |            |     ACB    |            |                 |      MA     |            |        |  UNID |     W         |
+|    S     |            |     ACD    |            |                 |      AO     |            |        |       |               |
+|          |            |     ACE    |            |                 |             |            |        |       |               |
+|          |            |     ACS    |            |                 |             |            |        |       |               |
+|          |            |     ACT    |            |                 |             |            |        |       |               |
+|          |            |     CB     |            |                 |             |            |        |       |               |
+|          |            |     CE     |            |                 |             |            |        |       |               |
+|          |            |     CF     |            |                 |             |            |        |       |               |
+|          |            |     CM     |            |                 |             |            |        |       |               |
+|          |            |     CS     |            |                 |             |            |        |       |               |
+|          |            |     CMR    |            |                 |             |            |        |       |               |
+|          |            |     CL     |            |                 |             |            |        |       |               |
+
+
 # Download
 
 Version 1.0 : [Download](https://github.com/zaimpauzi/CoralLAB/releases/download/1.0/CoralLAB_v1.0_setup.exe)
